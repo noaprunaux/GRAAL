@@ -16,5 +16,5 @@ export default async function (req, res) {
   res.status(200).json({ result: completion.data.choices[0].text });
 }
 function generatePrompt(priceMin, priceMax, gender, age, hobbies) {
-  return `suggest 3 Christmas gift ideas between ${priceMin}$ and ${priceMax}$ for a ${age} years old ${gender} that is into ${hobbies}.`;
+  return `Donne 3 idées de cadeaux entre ${priceMin}euros et ${priceMax}euros pour ${gender} de ${age} qui est intéressé par ${hobbies}.`;
 }

@@ -35,68 +35,68 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
+        <title>GRAAL</title>
         <link rel="icon" href="/dog.png" />
       </Head>
 
       <main className={styles.main}>
-        <h3>Christmas gift generator 🎁 💡</h3>
+        <h3>GRAAL</h3>
         <form onSubmit={onSubmit}>
-          <label>For who is the gift?</label>
+          <label>A qui souhaitez-vous l'offrir ?</label>
           <select
             name="gender"
             value={gender}
             onChange={(e) => setGender(e.target.value)}
           >
-            <option value="man">Man</option>
-            <option value="woman">Woman</option>
+            <option value="man">Un homme</option>
+            <option value="woman">Une femme</option>
           </select>
 
-          <label>Age</label>
+          <label>Âge</label>
           <input
             type="number"
             min={1}
             max={99}
             name="age"
-            placeholder="Enter the age"
+            placeholder="Entrez l'âge"
             value={age}
             onChange={(e) => setAge(Number.parseInt(e.target.value))}
           />
 
-          <label>Price from</label>
+          <label>Montant minimum</label>
           <input
             type="number"
             min={1}
             name="priceMin"
-            placeholder="Enter the minimum price"
+            placeholder="Entrez le montant minimum"
             value={priceMin}
             onChange={(e) => setPriceMin(Number.parseInt(e.target.value))}
           />
 
-          <label>Price to</label>
+          <label>Montant maximum</label>
           <input
             type="number"
             min={1}
             name="priceMax"
-            placeholder="Enter the maximum price"
+            placeholder="Entrez le montant maximum"
             value={priceMax}
             onChange={(e) => setPriceMax(Number.parseInt(e.target.value))}
           />
 
-          <label>Hobbies</label>
+          <label>Centres d'intérêts</label>
           <input
             type="text"
             name="hobbies"
-            placeholder="Enter the hobbies"
+            placeholder="Entrez les centres d'intérêts"
             value={hobbies}
             onChange={(e) => setHobbies(e.target.value)}
           />
-          <input type="submit" value="Generate gift ideas" />
+          <input type="submit" value="Trouver le cadeau idéal" />
         </form>
         {loading && (
           <div>
-            <h3>Looking for the best gift ideas 🎁 💡</h3>
-            <img src="/loading.webp" className={styles.loading} />
+            <h3>En recherche des meilleures idées 💡</h3>
+            <img src="/loading.gif" className={styles.loading} />
           </div>
         )}
         <div
